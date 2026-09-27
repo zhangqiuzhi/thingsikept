@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<defs>
+<filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".48 .72" numOctaves="3" seed="18" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="9"/></filter>
+<filter id="fine"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<rect width="1600" height="1200" filter="url(#paper)" opacity=".14"/>
+<g fill="none" filter="url(#soft)" stroke-width="16">
+<path d="M-80 340 Q520 240 900 480 T1700 510" stroke="#948d80" opacity=".065"/>
+<path d="M-80 321 Q520 221 900 461 T1700 491" stroke="#fff" opacity=".42"/>
+<path d="M350-80 Q490 360 395 760 T480 1300" stroke="#aaa294" opacity=".065"/>
+<path d="M370-80 Q510 360 415 760 T500 1300" stroke="#fff" opacity=".4"/>
+<path d="M1120-60 Q1060 490 1220 850 L1640 1200" stroke="#a49a88" opacity=".06"/>
+</g>
+<g fill="none" filter="url(#fine)" stroke-width="2">
+<path d="M-30 903 Q590 836 980 912 T1640 965" stroke="#9b9385" opacity=".1"/>
+<path d="M-30 899 Q590 832 980 908 T1640 961" stroke="#fff" opacity=".6"/>
+</g></svg>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF8F1"><meta name="description" content="一个私人数字收藏盒。放进舍不得丢的物件，慢慢整理留下来的生活。"><title>things i kept — 私人收藏盒</title><link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="./assets/fonts/OliviaSwirl-origin.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="./src/styles.css"></head>
+<body>
+<header>
+ <div class="masthead"><div class="masthead-kicker"><span class="issue">MY TIN CASE</span><span class="inline-caption">那些搬了很多次家也没舍得扔的东西</span></div><span class="brand">things i kept<span class="brand-dot">*</span></span></div>
+ <div class="edition">a personal archive<svg viewBox="0 0 230 62" aria-hidden="true"><path d="M209 17C177-3 59 0 17 18S2 49 69 52S222 49 224 26C224 18 210 10 196 9"/></svg></div>
+</header>
+<main id="scene" aria-label="私人收藏盒" class="scene">
+
+ <div class="stage-wrap"><div id="stage" class="stage">
+  <img class="tin-photo closed-tin" src="./assets/closed-tin-lettered.webp" alt="压印 things i kept 字样的真实银色铁盒" draggable="false">
+  <div class="open-tin-surface">
+   <img class="tin-photo open-tin" src="./assets/open-tin.webp" alt="打开的银色铁盒，上下两部分都可放置物件" draggable="false">
+   <div id="tin-canvas" class="tin-canvas" aria-label="铁盒拼贴画布">
+    <div class="tin-area" id="upper-tin-area" aria-label="上半盒盖区域"></div><div class="tin-area" id="lower-tin-area" aria-label="下半盒底区域"></div>
+    <div class="empty-note"><span class="empty-scribble">start here!</span><svg viewBox="0 0 80 54" aria-hidden="true"><path d="M9 6Q57-3 61 40M46 32L61 46 74 28"/></svg><p>放一样你一直<br><span>舍不得丢</span>的东西进来。</p><button class="paper-link add-trigger">＋ 放进一件东西</button></div>
+   </div>
+  </div>
+ </div></div>
+ 
+ <button id="open-box" aria-label="打开收藏盒"><span>click anywhere<br>to open</span><svg viewBox="0 0 150 110" aria-hidden="true"><path d="M138 10C131 76 67 90 13 59M30 47L10 57 22 79"/></svg></button>
+ 
+ <div class="opened-tools" hidden><button class="paper-link add-trigger" id="add-more">＋ 再放一件</button><span id="count"></span><button id="close-box">收好盒子 ↘</button></div>
+ <aside id="memory-note" class="memory-note" hidden aria-label="物件记录"></aside>
+ 
+</main>
+<div id="save-state" role="status" aria-live="polite"></div>
+<dialog id="upload-dialog"><form id="upload-form"><button class="dialog-close" type="button" aria-label="关闭上传面板">×</button><span class="eyebrow">ONE MORE LITTLE THING</span><h1>把它留下来。</h1><label class="upload-area" id="upload-area"><input id="file-input" type="file" accept="image/jpeg,image/png,image/webp" required><img id="upload-preview" hidden alt="待放入的物件"><span id="upload-prompt"><span class="upload-plus">＋</span>选一张它的照片<small>JPG / PNG / WEBP · 最大 15 MB</small></span></label><label class="field">它是什么？<input id="item-name" maxlength="60" placeholder="大学时买的蓝色马克杯" required></label><label class="field">为什么一直留着它？<textarea id="item-story" maxlength="600" rows="3" placeholder="已经缺了一块，但它跟着我搬过四次家。"></textarea></label><p id="upload-error" role="alert"></p><div class="form-bottom"><span>一件东西，一小段生活。</span><button class="submit-note" id="submit-item" type="submit">放进盒子 ↗</button></div></form></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="./src/app.js"></script></body></html>
